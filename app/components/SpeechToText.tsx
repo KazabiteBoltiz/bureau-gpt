@@ -58,7 +58,7 @@ export default function SpeechToTextTranslator() {
 
             const targetLanguage = recog
 
-            const response = await fetch(`https://speech.googleapis.com/v1/speech:recognize?key=${AIzaSyBsPswAGebCtqu-HgWtGN1TYlJCl7wWiRU}`, {
+            const response = await fetch(`https://speech.googleapis.com/v1/speech:recognize?key=AIzaSyBsPswAGebCtqu-HgWtGN1TYlJCl7wWiRU`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({

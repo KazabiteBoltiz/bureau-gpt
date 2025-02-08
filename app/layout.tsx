@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'App Name Here',
+  title: 'BureauGPT',
   description: 'A modern writup creation interface for bureaucrats',
 };
 
