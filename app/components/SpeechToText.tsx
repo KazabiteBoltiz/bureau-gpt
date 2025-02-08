@@ -113,7 +113,7 @@ export default function SpeechToTextTranslator() {
 
   const translateText = async (text: string, targetLang: string) => {
     try {
-      const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=${GOOGLE_API_KEY}`, {
+      const response = await fetch(`https://translation.googleapis.com/language/translate/v2?key=AIzaSyBsPswAGebCtqu-HgWtGN1TYlJCl7wWiRU`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
