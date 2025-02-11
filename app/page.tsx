@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { Code2, Github, Pen, Pencil, Users, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function Home() {
   useEffect(() => {
@@ -30,14 +31,13 @@ export default function Home() {
       {/* Sticky Header */}
       <header className="fixed top-0 w-full bg-oxford-blue/90 backdrop-blur-sm z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-5">
             <Pen className="h-8 w-8 text-orange-web" />
             <span className="text-xl font-bold">BureauGPT</span>
-            
-          </div>
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="Orator" className="hover:text-orange-web transition-colors">Orator</a>
-            <a href="Shabd" className="hover:text-orange-web transition-colors">Shabd</a>
+            <div className="flex items-center space-x-2">
+                <Button asChild variant = 'outline' className="hover:text-orange-web transition-colors"><Link href = '/Orator'>Orator</Link></Button>
+                <Button asChild variant = 'outline' className="hover:text-orange-web transition-colors"><Link href = '/Shabd'>Shabd</Link></Button>
+            </div>
           </div>
         </nav>
       </header>
@@ -49,7 +49,6 @@ export default function Home() {
             <div className="space-y-8">
               <h1 className="text-5xl sm:text-6xl font-bold leading-tight">
                 Made by Indians, for Indians
-                <span className="text-orange-web"> Innovation</span>
               </h1>
               <p className="text-xl text-platinum/80">
                 Seamless communication for impactful governance.

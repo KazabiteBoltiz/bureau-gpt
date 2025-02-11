@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { generateResponse } from "@/lib/gemini";
 import { Separator } from '@/components/ui/separator';
-import { MessageSquare, Send, Mic, Languages, Type, MoreVertical, Lock, Unlock, Edit2, Trash, Scan, PenTool, Sparkles, Delete, Copy } from 'lucide-react';
+import { MessageSquare, Send, Mic, Languages, Type, MoreVertical, Lock, Unlock, Edit2, Trash, Scan, PenTool, Sparkles, Delete, Copy, ArrowLeft } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { ThemeToggle } from './ThemeToggle';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -17,6 +17,7 @@ import { Label } from '@/components/ui/label';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Textarea } from '@/components/ui/textarea';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Link from 'next/link';
 
 const constraints = `
 do not write every point as a separate heading
@@ -236,8 +237,11 @@ export default function ChatInterface() {
 
   return (
     <div className="flex h-screen bg-background">
+
       {/* Sidebar Section */}
       <div className="w-64 border-r bg-card">
+      <Button asChild variant = 'link'><Link href = '/' className = 'p-4'><ArrowLeft className = 'mr-2'/>Homepage</Link></Button>
+
         <div className="p-4 flex items-center justify-between">
           <Button className="flex-1 mr-2" onClick={createNewChat}>
             <MessageSquare className="mr-2 h-4 w-4" />
